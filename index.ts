@@ -24,4 +24,3 @@ export function convertSize(size: number): string {
     }
     return (bb.toPrecision(3) + ' BB')
 }
-module.exports = convertSize;

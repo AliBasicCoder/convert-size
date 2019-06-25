@@ -26,5 +26,4 @@ function convertSize(size) {
     }
     return (bb.toPrecision(3) + ' BB');
 }
-// module.exports = convertSize;
-exports["default"] = convertSize;
+exports.convertSize = convertSize;
