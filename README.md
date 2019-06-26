@@ -14,4 +14,8 @@ import { convertSize } from 'convert-size';
 
 console.log(convertSize(1024)); // output 1 KB
 console.log(convertSize(1024 * 1024)); // output 1 MB
+console.log(convertSize(1024 * 1024 * 1024)); // output 1 GB
+console.log(convertSize(1024 * 1024 * 1024 * 1024)); // output 1 TB
+console.log(convertSize(1024 * 1024 * 1024 * 1024 * 1024)); // output 1 PB
+
 ```
