@@ -24,6 +24,6 @@ function convertSize(size) {
     if (tb < 1024) {
         return (tb.toPrecision(3) + ' TB');
     }
-    return (bb.toPrecision(3) + ' BB');
+    return (bb.toPrecision(3) + ' PB');
 }
 exports.convertSize = convertSize;

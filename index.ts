@@ -22,5 +22,5 @@ export function convertSize(size: number): string {
     if (tb < 1024) {
         return (tb.toPrecision(3) + ' TB')
     }
-    return (bb.toPrecision(3) + ' BB')
+    return (bb.toPrecision(3) + ' PB')
 }
