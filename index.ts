@@ -23,5 +23,5 @@ export const convertSize = (size: number): string => {
         return (tb.toPrecision(3) + " TB");
     }
     return (bb.toPrecision(3) + " PB");
-}
+};
 
