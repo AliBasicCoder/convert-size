@@ -1,4 +1,4 @@
-export function convertSize(size: number): string {
+export const convertSize = (size: number): string => {
     if (!size || size === 0 || size === 1) {
         return (size + ' byte')
     }
@@ -11,16 +11,16 @@ export function convertSize(size: number): string {
     var tb = gb / 1024;
     var bb = tb / 1024;
     if (kb < 1024) {
-        return (kb.toPrecision(3) + ' KB')
+        return (kb.toPrecision(3) + " KB")
     }
     if (mb < 1024) {
-        return (mb.toPrecision(3) + ' MB')
+        return (mb.toPrecision(3) + " MB")
     }
     if (gb < 1024) {
-        return (gb.toPrecision(3) + ' GB')
+        return (gb.toPrecision(3) + " GB")
     }
     if (tb < 1024) {
-        return (tb.toPrecision(3) + ' TB')
+        return (tb.toPrecision(3) + " TB")
     }
-    return (bb.toPrecision(3) + ' PB')
+    return (bb.toPrecision(3) + " PB")
 }
