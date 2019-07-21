@@ -1,1 +1,30 @@
-{"name":"convert-size","version":"1.0.2","description":"a package to convert size from bytes to kb mb and so on","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/AliBaiscCoder/convertSize.git"},"keywords":["size","bytes","MB","KB"],"author":"AliBasicCoder","license":"MIT","bugs":{"url":"https://github.com/AliBaiscCoder/convertSize/issues"},"homepage":"https://github.com/AliBaiscCoder/convertSize#readme","dependencies":{},"devDependencies":{"@types/node":"^12.0.10","fs-pro":"^1.2.6"}}
+{
+    "name": "convert-size",
+    "version": "1.0.3",
+    "description": "a package to convert size from bytes to kb mb and so on",
+    "main": "out/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AliBaiscCoder/convertSize.git"
+    },
+    "keywords": [
+        "size",
+        "bytes",
+        "MB",
+        "KB"
+    ],
+    "author": "AliBasicCoder",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/AliBaiscCoder/convertSize/issues"
+    },
+    "homepage": "https://github.com/AliBaiscCoder/convertSize#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^12.0.10",
+        "fs-pro": "^1.2.6"
+    }
+}
