@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "umd",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "out"
+  }
+}
