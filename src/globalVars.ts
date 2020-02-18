@@ -10,6 +10,7 @@ const units = [
 
 // a var for 1024 based units like 'kibi byte'
 const iUnits = [
+  "Byte",
   "Kibi Byte",
   "Mebi Byte",
   "Gibi Byte",
@@ -21,6 +22,6 @@ const iUnits = [
 const unitsShortcut = units.map((unit, i) => i === 0 ? "B" : `${unit[0]}B`);
 
 // a var for 1024 units shortcuts like 'KiB' and 'MiB'
-const iUnitsShortcut = iUnits.map(unit => `${unit[0]}iB`);
+const iUnitsShortcut = iUnits.map((unit, i) => i === 0 ? "B" : `${unit[0]}iB`);
 
 export { units, iUnits, unitsShortcut, iUnitsShortcut }
