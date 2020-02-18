@@ -62,7 +62,7 @@ this option tels the function to use **lower case** letters
 ``` js
 import { convertSize } from 'convert-size';
 
-convertSize(1024, {lowerCase: true}) // => 1 kb
+convertSize(1024, { lowerCase: true }) // => 1 kb
 ```
 
 ## LICENSE
