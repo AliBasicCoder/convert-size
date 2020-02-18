@@ -1,6 +1,17 @@
 import { Options, units, OptionsBase, Data } from "./types";
 import applyOptions from "./applyOptions";
 import getKeys from "./getKeys";
+import castTo from "./castTo";
+import value from "./value";
+
+const getPower = (base: number, num: number): number => {
+  let count = 1;
+  while (num > 0) {
+    num /= base;
+    count++;
+  }
+  return count;
+}
 
 const defaultOptions: OptionsBase = {
   base: 1000,
@@ -22,38 +33,36 @@ function convertSize(from: string | number, to?: units | Options, options?: Opti
       gb = mb / base,
       tb = gb / base,
       pb = tb / base;
-    const [
-      byte,
-      kiloByte,
-      megaByte,
-      gigaByte,
-      teraByte,
-      petaByte
-    ] = getKeys(op);
+    const arr = [from, kb, mb, gb, pb];
+    const arr2 = getKeys(op);
 
-    let resObj: Data;
+    let iStooped = 0;
 
-    if (from < base) {
-      resObj = { value: from, unit: byte };
-    } else if (kb < base) {
-      resObj = { value: kb, unit: kiloByte };
-    } else if (mb < base) {
-      resObj = { value: mb, unit: megaByte };
-    } else if (gb < base) {
-      resObj = { value: gb, unit: gigaByte };
-    } else if (tb < base) {
-      resObj = { value: tb, unit: teraByte };
-    } else {
-      resObj = { value: pb, unit: petaByte };
-    }
+    let resObj: Data = {
+      value: arr.find((elem, i) => {
+        const con = elem < base;
+        if (i === arr.length - 1) return true;
+        if (con) iStooped = i;
+        return con;
+      }) || 0,
+      unit: arr2[iStooped]
+    };
 
     if (typeof to === "string") {
-
+      return applyOptions(castTo({ ...resObj, to }), op);
     }
 
     return applyOptions(resObj, op);
   } else {
-    return "";
+    const regex = /([0-9.]*) ([\w ]*)/;
+    // @ts-ignore
+    const [all, val, unit] = from.match(regex);
+
+    if (typeof to === "string") {
+      return applyOptions(castTo({ value: Number(val), unit, to }), op);
+    } else {
+      return (value(unit) * Number(val));
+    }
   }
 }
 
