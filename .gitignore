@@ -1,3 +1,4 @@
 node_modules
 index.js
 out/
+convertSize.min.js
