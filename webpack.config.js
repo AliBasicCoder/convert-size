@@ -1,7 +1,5 @@
 const path = require("path");
 
-const dtsBundle = require("dts-bundle-webpack");
-
 module.exports = {
   entry: "./src/index",
   output: {
