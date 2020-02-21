@@ -2,7 +2,7 @@
     "name": "convert-size",
     "version": "1.0.3",
     "description": "a package to convert size from bytes to kb mb and so on",
-    "main": "out/index.js",
+    "main": "dist/convertSize.min.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
