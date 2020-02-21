@@ -26,7 +26,8 @@ module.exports = {
   plugins: [
     new dtsBundle({
       name: "convert-size",
-      main: "out/index.d.ts"
+      main: "out/index.d.ts",
+      out: path.join(__dirname, "convertSize.d.ts")
     })
   ]
 }
