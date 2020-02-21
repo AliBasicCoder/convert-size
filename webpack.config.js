@@ -8,7 +8,7 @@ module.exports = {
     filename: "convertSize.min.js",
     path: __dirname,
     library: "convertSize",
-    libraryTarget: "umd"
+    libraryTarget: "commonjs"
   },
   mode: "production",
   module: {

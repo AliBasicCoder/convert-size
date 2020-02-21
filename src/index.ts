@@ -4,15 +4,6 @@ import getKeys from "./getKeys";
 import castTo from "./castTo";
 import value from "./value";
 
-const getPower = (base: number, num: number): number => {
-  let count = 1;
-  while (num > 0) {
-    num /= base;
-    count++;
-  }
-  return count;
-}
-
 const defaultOptions: OptionsBase & st = {
   base: 1000,
   accuracy: 5,

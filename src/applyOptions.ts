@@ -1,5 +1,5 @@
 import { Data, OptionsBase } from "./types";
-import { units, iUnits, iUnitsShortcut, unitsShortcut } from "./globalVars";
+import { units, iUnits } from "./globalVars";
 
 function fix(number: number, decimal: number) {
   const fixer = Math.pow(10, decimal);
