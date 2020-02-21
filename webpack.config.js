@@ -4,7 +4,7 @@ module.exports = {
   entry: "./src/index",
   output: {
     filename: "convertSize.min.js",
-    path: __dirname,
+    path: path.join(__dirname, "dist"),
     library: "convertSize",
     libraryTarget: "umd",
     globalObject: "this"
