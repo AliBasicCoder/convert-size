@@ -34,3 +34,4 @@ export function swUnit(unit: string, op: OptionsBase) {
 export default function applyOptions(data: Data, options: OptionsBase): string {
   return `${fix(data.value, options.accuracy)} ${swUnit(data.unit, options)}`;
 }
+

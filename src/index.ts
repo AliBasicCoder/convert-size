@@ -1,4 +1,4 @@
-import { Options, units, OptionsBase, Data } from "./types";
+import { Options, units, OptionsBase, Data, st, OptionsWithoutSt, OptionsWithSt } from "./types";
 import applyOptions from "./applyOptions";
 import getKeys from "./getKeys";
 import castTo from "./castTo";
@@ -13,12 +13,18 @@ const getPower = (base: number, num: number): number => {
   return count;
 }
 
-const defaultOptions: OptionsBase = {
+const defaultOptions: OptionsBase & st = {
   base: 1000,
   accuracy: 5,
   lowerCase: false,
-  shortcut: true
+  shortcut: true,
+  stringify: false
 }
+
+function convertSize(from: number, to?: Options): string;
+function convertSize(from: string, to?: Options): number;
+function convertSize(from: number | string, to: units, options?: OptionsWithoutSt): number;
+function convertSize(from: string, to: units, options: OptionsWithSt): string;
 
 // the main function of this module
 function convertSize(from: string | number, to?: units | Options, options?: Options): string | number {
@@ -59,7 +65,8 @@ function convertSize(from: string | number, to?: units | Options, options?: Opti
     const [all, val, unit] = from.match(regex);
 
     if (typeof to === "string") {
-      return applyOptions(castTo({ value: Number(val), unit, to }), op);
+      const obj = castTo({ value: Number(val), unit, to });
+      return op.stringify ? applyOptions(obj, op) : obj.value;
     } else {
       return (value(unit) * Number(val));
     }

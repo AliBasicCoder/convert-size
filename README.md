@@ -9,16 +9,19 @@ units such as KB MB TB
 ## Usage
 
 ```js
-const { convertSize } = require('convert-size');
+const { default: convertSize } = require('convert-size');
 // or
-import { convertSize } from 'convert-size';
+import convertSize from 'convert-size';
 
-convertSize(1024); // => 1.00 KB
-convertSize(1024 * 1024); // => 1.00 MB
+convertSize(1000); // => 1.00 KB
+convertSize(1000 * 1000); // => 1.00 MB
+convertSize("1 MB") // => 1000000
+convertSize("1 GB", "MB") // => 1000
+convertSize(1000000, "KB")
 
 // to know more about option read the options part below
 convertSize (
-    1024 * 1024,
+    1000 * 1000,
     {
         accuracy: 0,
         shortcut: false

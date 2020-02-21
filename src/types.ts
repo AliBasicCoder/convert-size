@@ -6,6 +6,8 @@ export interface Data {
 
 export type units = "B" | "KB" | "MB" | "GB" | "PB" | "KiB" | "MiB" | "GiB" | "TiB" | "PiB";
 
+export type st = { stringify: boolean; }
+
 export interface OptionsBase {
   accuracy: number;
   shortcut: boolean;
@@ -13,4 +15,8 @@ export interface OptionsBase {
   base: 1000 | 1024;
 }
 
-export type Options = Partial<OptionsBase>;
+export type Options = Partial<OptionsBase & st>;
+
+export type OptionsWithoutSt = Partial<OptionsBase>;
+
+export type OptionsWithSt = Partial<OptionsBase> & st;
