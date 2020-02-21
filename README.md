@@ -13,11 +13,12 @@ const { default: convertSize } = require('convert-size');
 // or
 import convertSize from 'convert-size';
 
-convertSize(1000); // => 1.00 KB
-convertSize(1000 * 1000); // => 1.00 MB
+convertSize(1000); // => 1 KB
+convertSize(1000 * 1000); // => 1 MB
 convertSize("1 MB") // => 1000000
 convertSize("1 GB", "MB") // => 1000
-convertSize(1000000, "KB")
+convertSize(1000000, "KB") // => 1000
+convertSize("1 mb", "GB", { stringify: true }) // => 0.001 GB
 
 // to know more about option read the options part below
 convertSize (
