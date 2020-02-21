@@ -1,5 +1,7 @@
 const path = require("path");
 
+const dtsBundle = require("dts-bundle-webpack");
+
 module.exports = {
   entry: "./src/index",
   output: {
@@ -21,4 +23,10 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
+  plugins: [
+    new dtsBundle({
+      name: "convert-size",
+      main: "out/index.d.ts"
+    })
+  ]
 }
