@@ -7,7 +7,7 @@ import { units, iUnits } from "./globalVars";
  * @param number the number to approximate
  * @param decimal the decimal count
  */
-function fix(number: number, decimal: number) {
+export function fix(number: number, decimal: number) {
   const fixer = Math.pow(10, decimal);
   return Math.round(number * fixer) / fixer;
 }
@@ -56,4 +56,3 @@ export default function applyOptions(data: Data, options: OptionsBase): string {
   const fixed = fix(data.value, options.accuracy);
   return `${fixed} ${swUnit(data.unit, options)}${(fixed > 1 && !options.shortcut) ? "s" : ""}`;
 }
-

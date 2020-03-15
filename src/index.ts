@@ -1,5 +1,5 @@
 import { Options, units, OptionsBase, Data, st, OptionsWithoutSt, OptionsWithSt } from "./types";
-import applyOptions from "./applyOptions";
+import applyOptions, { fix } from "./applyOptions";
 import getKeys from "./getKeys";
 import castTo from "./castTo";
 import value from "./value";
@@ -21,7 +21,7 @@ function convertSize(from: string, to: units, options: OptionsWithSt): string;
 // the main function of this module
 function convertSize(from: string | number, to?: units | Options, options?: Options): string | number {
   // defaulting the options
-  const op = Object.assign(defaultOptions, typeof to === "object" ? to : (options || {}));
+  const op = Object.assign({}, defaultOptions, typeof to === "object" ? to : (options || {}));
   const { base } = op;
 
   if (typeof from === "number") {
@@ -60,9 +60,9 @@ function convertSize(from: string | number, to?: units | Options, options?: Opti
       // making a cast if "to" is a string
       const casted = castTo({ ...resObj, to });
       if (op.stringify)
-        return applyOptions(casted, op)
+        return applyOptions(casted, op);
       else
-        return casted.value;
+        return fix(casted.value, op.accuracy);
     }
     // applying the options to the object
     // and switching it to a string
