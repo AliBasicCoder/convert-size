@@ -4,7 +4,8 @@
     "description": "a package to convert size from bytes to kb mb and so on",
     "main": "dist/convertSize.min.js",
     "scripts": {
-        "test": "webpack && mocha"
+        "build": "webpack",
+        "test": "mocha"
     },
     "repository": {
         "type": "git",
