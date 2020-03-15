@@ -54,6 +54,6 @@ export function swUnit(unit: string, op: OptionsBase) {
 
 export default function applyOptions(data: Data, options: OptionsBase): string {
   const fixed = fix(data.value, options.accuracy);
-  return `${fixed} ${swUnit(data.unit, options)}${fixed > 1 ? "s" : ""}`;
+  return `${fixed} ${swUnit(data.unit, options)}${(fixed > 1 && !options.shortcut) ? "s" : ""}`;
 }
 

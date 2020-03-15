@@ -9,7 +9,7 @@ import { units, iUnits, iUnitsShortcut, unitsShortcut } from "./globalVars";
 export default function getKeys(op: OptionsBase) {
   const { base, lowerCase, shortcut } = op;
 
-  const arr = (base === 1000 ? (shortcut ? units : unitsShortcut) : (shortcut ? iUnitsShortcut : iUnits));
+  const arr = (base === 1000 ? (shortcut ? unitsShortcut : units) : (shortcut ? iUnitsShortcut : iUnits));
 
   // mapping the array to lower case if lowerCase is true
   return lowerCase ? arr.map(str => str.toLowerCase()) : arr;

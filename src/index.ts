@@ -57,8 +57,12 @@ function convertSize(from: string | number, to?: units | Options, options?: Opti
     };
 
     if (typeof to === "string") {
-      // making a cast if "to" is a string  
-      return applyOptions(castTo({ ...resObj, to }), op);
+      // making a cast if "to" is a string
+      const casted = castTo({ ...resObj, to });
+      if (op.stringify)
+        return applyOptions(casted, op)
+      else
+        return casted.value;
     }
     // applying the options to the object
     // and switching it to a string
