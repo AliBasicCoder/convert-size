@@ -1,4 +1,4 @@
-// a var for 1000 based units like 'mega byte' and 'kilo byte'
+/** an array for 1000 based units like 'mega byte' */
 const units = [
   "Byte",
   "Kilo Byte",
@@ -8,7 +8,7 @@ const units = [
   "Peta Byte"
 ];
 
-// a var for 1024 based units like 'kibi byte'
+/** an array for 1024 based units like 'kibi byte' */
 const iUnits = [
   "Byte",
   "Kibi Byte",
@@ -18,10 +18,10 @@ const iUnits = [
   "Pebi Byte"
 ];
 
-// a var for 1000 units shortcuts like 'KB' and 'MB'
+/** an array for 1000 units shortcuts like 'KB' and 'MB' */
 const unitsShortcut = units.map((unit, i) => i === 0 ? "B" : `${unit[0]}B`);
 
-// a var for 1024 units shortcuts like 'KiB' and 'MiB'
+/** an array for 1024 units shortcuts like 'KiB' and 'MiB' */
 const iUnitsShortcut = iUnits.map((unit, i) => i === 0 ? "B" : `${unit[0]}iB`);
 
 export { units, iUnits, unitsShortcut, iUnitsShortcut }

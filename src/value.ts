@@ -1,12 +1,18 @@
 import { units, iUnits, unitsShortcut, iUnitsShortcut } from "./globalVars";
 
-// maps the arr to lower case
-const mapArr = (arr: Array<string>) => arr.map(str => str.toLowerCase());
-// get the index of unit
-const indOfUnit = (arr: Array<string>, unit: string) => arr.indexOf(unit.toLowerCase());
-// maps the array and the index of unit
-const find = (arr: Array<string>, unit: string) => indOfUnit(mapArr(arr), unit);
-// makes function the gets the base to the power of value 
+/** maps the arr to lower case */
+const mapArr = (arr: Array<string>) =>
+  arr.map(str => str.toLowerCase());
+
+/** get the index of unit */
+const indOfUnit = (arr: Array<string>, unit: string) =>
+  arr.indexOf(unit.toLowerCase());
+
+/** maps the array and the index of unit */
+const find = (arr: Array<string>, unit: string) =>
+  indOfUnit(mapArr(arr), unit);
+
+/** makes a function that gets the base to the power of value */
 const maker = (base: number) => (value: number) => Math.pow(base, value);
 
 const th = maker(1000);
