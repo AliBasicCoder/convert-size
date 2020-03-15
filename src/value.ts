@@ -38,5 +38,5 @@ export default function value(unit: string) {
   if (iUSM > -1) {
     return th24(iUSM > 0 ? iUSM : 1);
   }
-  throw new Error("could find the value of the unit: " + unit);
+  throw new Error(`could find the value of the unit: ${unit}`);
 }
