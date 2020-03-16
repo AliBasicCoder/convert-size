@@ -7,9 +7,9 @@ import { units, iUnits } from "./globalVars";
  * @param number the number to approximate
  * @param decimal the decimal count
  */
-export function fix(number: number, decimal: number) {
+export function fix(num: number, decimal: number) {
   const fixer = Math.pow(10, decimal);
-  return Math.round(number * fixer) / fixer;
+  return Math.round(num * fixer) / fixer;
 }
 
 /**

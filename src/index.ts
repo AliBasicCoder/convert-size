@@ -26,13 +26,13 @@ function convertSize(from: string | number, to?: units | Options, options?: Opti
 
   if (typeof from === "number") {
 
-    const
-      // getting how may KB (or KiB) in the number passed
-      kb = from / base,
-      mb = kb / base,
-      gb = mb / base,
-      tb = gb / base,
-      pb = tb / base;
+    // getting how may KB (or KiB) in the number passed
+    const kb = from / base;
+    const mb = kb / base;
+    const gb = mb / base;
+    const tb = gb / base;
+    const pb = tb / base;
+
     const arr = [from, kb, mb, gb, pb];
     // getting the needed keys (units)
     const arr2 = getKeys(op);
@@ -40,7 +40,7 @@ function convertSize(from: string | number, to?: units | Options, options?: Opti
     // a var to store where have the "arr.find" loop stopped
     let iStooped = 0;
 
-    let resObj: Data = {
+    const resObj: Data = {
       // looping throw arr and finding the item
       // that is less that the base
       value: arr.find((element, i) => {
@@ -73,7 +73,7 @@ function convertSize(from: string | number, to?: units | Options, options?: Opti
     const [all, val, unit] = from.match(regex);
 
     if (typeof to === "string") {
-      // checking if a cast is needed 
+      // checking if a cast is needed
       const obj = castTo({ value: Number(val), unit, to });
       // checking if a switch to a string is needed
       return op.stringify ? applyOptions(obj, op) : obj.value;
