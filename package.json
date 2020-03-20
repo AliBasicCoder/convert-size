@@ -6,7 +6,9 @@
   "scripts": {
     "build": "webpack",
     "test": "mocha",
-    "lint": "tslint src/*.ts"
+    "lint": "tslint src/*.ts",
+    "git": "git add . && git commit -a -m \"new version\" && git push origin master",
+    "prepublish": "yarn lint && yarn build && yarn test"
   },
   "repository": {
     "type": "git",

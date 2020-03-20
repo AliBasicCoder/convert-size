@@ -14,11 +14,11 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
-      },
-    ],
+        use: "ts-loader"
+      }
+    ]
   },
   resolve: {
-    extensions: ['.ts'],
+    extensions: [".ts"]
   }
-}
+};
