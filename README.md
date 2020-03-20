@@ -1,7 +1,8 @@
 # convert-size
 
-[![npm version](https://img.shields.io/npm/v/convert-size.svg)](https://www.npmjs.com/package/convert-size)
+[![npm version](https://img.shields.io/static/v1.svg?label=npm%20version&message=1.0.0&color=green)](https://www.npmjs.com/package/convert-size)
 [![LICENSE](https://img.shields.io/static/v1.svg?label=LICENSE&message=MIT&color=green)](https://github.com/AliBasicCoder/convertSize/blob/master/LICENSE)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize?ref=badge_shield)
 
 convert-size is a package to convert a size with bytes to 
 units such as KB MB TB
@@ -69,8 +70,9 @@ import { convertSize } from 'convert-size';
 convertSize(1024, { lowerCase: true }) // => 1 kb
 ```
 
-## LICENSE
+## License
 
-MIT License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize?ref=badge_large)
 
 Copyright (c) 2019 AliBasicCoder
+
