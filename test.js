@@ -1,8 +1,8 @@
-const { default: convertSize } = require("./dist/convertSize.min")
+const { default: convertSize } = require("./dist/convertSize.min");
 const assert = require("assert");
 
-describe("main", _ => {
-  describe("1000 base", _ => {
+describe("main", () => {
+  describe("1000 base", () => {
     it("number", done => {
       assert.equal(convertSize(1000), "1 KB");
       done();
@@ -16,7 +16,7 @@ describe("main", _ => {
       done();
     });
   });
-  describe("1024 base", _ => {
+  describe("1024 base", () => {
     it("number", done => {
       assert.equal(convertSize(1024, { base: 1024 }), "1 KiB");
       done();
@@ -29,10 +29,10 @@ describe("main", _ => {
       assert.equal(convertSize("1 GiB", "MiB"), 1024);
       done();
     });
-  })
-})
+  });
+});
 
-describe("options", _ => {
+describe("options", () => {
   it("stringify", done => {
     assert.equal(convertSize(1000, "KB", { stringify: true }), "1 KB");
     done();
@@ -42,7 +42,10 @@ describe("options", _ => {
     done();
   });
   it("accuracy string", done => {
-    assert.equal(convertSize(1000, "KiB", { stringify: true, accuracy: 2 }), "0.98 KiB");
+    assert.equal(
+      convertSize(1000, "KiB", { stringify: true, accuracy: 2 }),
+      "0.98 KiB"
+    );
     done();
   });
   it("shortcut", done => {
@@ -50,7 +53,10 @@ describe("options", _ => {
     done();
   });
   it("lower case", done => {
-    assert.equal(convertSize(1000, "KB", { stringify: true, lowerCase: true }), "1 kb");
+    assert.equal(
+      convertSize(1000, "KB", { stringify: true, lowerCase: true }),
+      "1 kb"
+    );
     done();
   });
 });
