@@ -1,5 +1,6 @@
 # convert-size
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7e46b80fed65435c9f83b9808e51a640)](https://app.codacy.com/manual/AliBasicCoder/convert-size?utm_source=github.com&utm_medium=referral&utm_content=AliBasicCoder/convert-size&utm_campaign=Badge_Grade_Dashboard)
 [![npm](https://img.shields.io/npm/dm/convert-size)](https://npmjs.com/package/convert-size)
 [![npm](https://img.shields.io/npm/v/convert-size)](https://npmjs.com/package/convert-size)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize?ref=badge_shield)
