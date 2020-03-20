@@ -24,4 +24,4 @@ const unitsShortcut = units.map((unit, i) => i === 0 ? "B" : `${unit[0]}B`);
 /** an array for 1024 units shortcuts like 'KiB' and 'MiB' */
 const iUnitsShortcut = iUnits.map((unit, i) => i === 0 ? "B" : `${unit[0]}iB`);
 
-export { units, iUnits, unitsShortcut, iUnitsShortcut }
+export { units, iUnits, unitsShortcut, iUnitsShortcut };

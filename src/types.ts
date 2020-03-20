@@ -6,7 +6,7 @@ export interface Data {
 
 export type units = "B" | "KB" | "MB" | "GB" | "PB" | "KiB" | "MiB" | "GiB" | "TiB" | "PiB";
 
-export type st = { stringify: boolean; }
+export type st = { stringify: boolean; };
 
 export interface OptionsBase {
   accuracy: number;

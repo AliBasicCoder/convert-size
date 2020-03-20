@@ -8,5 +8,5 @@ export default function castTo(obj: Data & { to: units }): Data {
   return {
     value: obj.value * diff,
     unit: obj.to
-  }
+  };
 }

@@ -24,7 +24,7 @@ export function swUnit(unit: string, op: OptionsBase) {
     shortcut: unit.length <= 3,
     // true if the unit is a lowercase string
     lowerCase: unit.toLowerCase() === unit
-  }
+  };
   let res: string;
   if (op.shortcut !== obj.shortcut) {
     // finding the needed unit by finding
@@ -44,7 +44,7 @@ export function swUnit(unit: string, op: OptionsBase) {
         res
           .split(" ")
           .reduce((pv, cv) => `${pv} ${cv[0].toUpperCase()}${cv.slice(1)}`, "")
-          .slice(1)
+          .slice(1);
     } else {
       res = res.toLowerCase();
     }

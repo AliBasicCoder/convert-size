@@ -11,7 +11,7 @@ const defaultOptions: OptionsBase & st = {
   lowerCase: false,
   shortcut: true,
   stringify: false
-}
+};
 
 function convertSize(from: number, to?: Options): string;
 function convertSize(from: string, to?: Options): number;
