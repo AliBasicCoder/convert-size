@@ -1,11 +1,13 @@
 # convert-size
 
+[![npm](https://img.shields.io/npm/dm/convert-size)](https://npmjs.com/package/convert-size)
+[![npm](https://img.shields.io/npm/v/convert-size)](https://npmjs.com/package/convert-size)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize?ref=badge_shield)
+
 [![GitHub issues](https://img.shields.io/github/issues/AliBasicCoder/convert-size)](https://github.com/AliBasicCoder/convert-size/issues)
 [![GitHub forks](https://img.shields.io/github/forks/AliBasicCoder/convert-size)](https://github.com/AliBasicCoder/convert-size/network)
 [![GitHub stars](https://img.shields.io/github/stars/AliBasicCoder/convert-size)](https://github.com/AliBasicCoder/convert-size/stargazers)
 [![GitHub license](https://img.shields.io/github/license/AliBasicCoder/convert-size)](https://github.com/AliBasicCoder/convert-size/blob/master/LICENSE)
-[![npm](https://img.shields.io/npm/dm/convert-size)](https://npmjs.com/package/convert-size)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAliBasicCoder%2FconvertSize?ref=badge_shield)
 
 convert-size is a package to convert a size with bytes to
 units such as KB MB TB
