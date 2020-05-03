@@ -3,11 +3,13 @@
   "version": "1.0.6",
   "description": "a package to convert size from bytes to kb mb and so on",
   "main": "dist/convertSize.min.js",
+  "types": "dist/convertSize.d.ts",
   "scripts": {
     "build": "webpack",
     "test": "mocha",
     "lint": "eslint src/*.ts *.js",
-    "git": "git add . && git commit -a -m \"new version\" && git push origin master"
+    "git": "git add . && git commit -a -m \"new version\" && git push origin master",
+    "prepublishOnly": "webpack"
   },
   "repository": {
     "type": "git",
