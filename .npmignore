@@ -1,5 +1,3 @@
-src/
 out/
 webpack.config.js
-yarn.lock
 .github/
