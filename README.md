@@ -1,5 +1,13 @@
 # convert-size
 
+This is library is available in deno
+
+just use
+
+```js
+import convertSize from "https://cdn.jsdelivr.net/npm/convert-size@latest/src/index.ts";
+```
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7e46b80fed65435c9f83b9808e51a640)](https://app.codacy.com/manual/AliBasicCoder/convert-size?utm_source=github.com&utm_medium=referral&utm_content=AliBasicCoder/convert-size&utm_campaign=Badge_Grade_Dashboard)
 [![npm](https://img.shields.io/npm/dm/convert-size)](https://npmjs.com/package/convert-size)
 [![npm](https://img.shields.io/npm/v/convert-size)](https://npmjs.com/package/convert-size)
@@ -16,9 +24,12 @@ units such as KB MB TB
 ## Usage
 
 ```js
+// on node (commonjs)
 const { default: convertSize } = require("convert-size");
-// or
+// or (es6)
 import convertSize from "convert-size";
+// on deno
+import convertSize from "https://cdn.jsdelivr.net/npm/convert-size@latest/src/index.ts";
 
 convertSize(1000); // => 1 KB
 convertSize(1000 * 1000); // => 1 MB
@@ -30,7 +41,7 @@ convertSize("1 mb", "GB", { stringify: true }); // => 0.001 GB
 // to know more about option read the options part below
 convertSize(1000 * 1000, {
   accuracy: 0,
-  shortcut: false
+  shortcut: false,
 }); // => 1 Kilo Byte
 ```
 
