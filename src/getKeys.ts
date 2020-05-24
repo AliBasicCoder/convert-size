@@ -1,5 +1,5 @@
-import { OptionsBase } from "./types";
-import { units, iUnits, iUnitsShortcut, unitsShortcut } from "./globalVars";
+import { OptionsBase } from "./types.ts";
+import { units, iUnits, iUnitsShortcut, unitsShortcut } from "./globalVars.ts";
 
 /**
  * a function to get the needed keys (units)
@@ -9,8 +9,11 @@ import { units, iUnits, iUnitsShortcut, unitsShortcut } from "./globalVars";
 export default function getKeys(op: OptionsBase) {
   const { base, lowerCase, shortcut } = op;
 
-  const arr = (base === 1000 ? (shortcut ? unitsShortcut : units) : (shortcut ? iUnitsShortcut : iUnits));
+  const arr =
+    (base === 1000
+      ? (shortcut ? unitsShortcut : units)
+      : (shortcut ? iUnitsShortcut : iUnits));
 
   // mapping the array to lower case if lowerCase is true
-  return lowerCase ? arr.map(str => str.toLowerCase()) : arr;
+  return lowerCase ? arr.map((str) => str.toLowerCase()) : arr;
 }

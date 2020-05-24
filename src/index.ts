@@ -5,12 +5,12 @@ import {
   Data,
   st,
   OptionsWithoutSt,
-  OptionsWithSt
-} from "./types";
-import applyOptions, { fix } from "./applyOptions";
-import getKeys from "./getKeys";
-import castTo from "./castTo";
-import value from "./value";
+  OptionsWithSt,
+} from "./types.ts";
+import applyOptions, { fix } from "./applyOptions.ts";
+import getKeys from "./getKeys.ts";
+import castTo from "./castTo.ts";
+import value from "./value.ts";
 
 // the default options
 const defaultOptions: OptionsBase & st = {
@@ -18,7 +18,7 @@ const defaultOptions: OptionsBase & st = {
   accuracy: 5,
   lowerCase: false,
   shortcut: true,
-  stringify: false
+  stringify: false,
 };
 
 function convertSize(from: number, to?: Options): string;
@@ -26,7 +26,7 @@ function convertSize(from: string, to?: Options): number;
 function convertSize(
   from: number | string,
   to: units,
-  options?: OptionsWithoutSt
+  options?: OptionsWithoutSt,
 ): number;
 function convertSize(from: string, to: units, options: OptionsWithSt): string;
 
@@ -34,13 +34,13 @@ function convertSize(from: string, to: units, options: OptionsWithSt): string;
 function convertSize(
   from: string | number,
   to?: units | Options,
-  options?: Options
+  options?: Options,
 ): string | number {
   // defaulting the options
   const op = Object.assign(
     {},
     defaultOptions,
-    typeof to === "object" ? to : options || {}
+    typeof to === "object" ? to : options || {},
   );
   const { base } = op;
 
@@ -62,18 +62,17 @@ function convertSize(
     const resObj: Data = {
       // looping throw arr and finding the item
       // that is less that the base
-      value:
-        arr.find((element, i) => {
-          const con = element < base;
-          // returning true if it's the last element
-          if (i === arr.length - 1) return true;
-          // if the element is less than the base setting
-          // iStooped to the index
-          if (con) iStooped = i;
-          return con;
-        }) || 0,
+      value: arr.find((element, i) => {
+        const con = element < base;
+        // returning true if it's the last element
+        if (i === arr.length - 1) return true;
+        // if the element is less than the base setting
+        // iStooped to the index
+        if (con) iStooped = i;
+        return con;
+      }) || 0,
       // getting the key (unit) were the loop has stopped
-      unit: arr2[iStooped]
+      unit: arr2[iStooped],
     };
 
     if (typeof to === "string") {

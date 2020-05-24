@@ -1,16 +1,14 @@
-import { units, iUnits, unitsShortcut, iUnitsShortcut } from "./globalVars";
+import { units, iUnits, unitsShortcut, iUnitsShortcut } from "./globalVars.ts";
 
 /** maps the arr to lower case */
-const mapArr = (arr: string[]) =>
-  arr.map(str => str.toLowerCase());
+const mapArr = (arr: string[]) => arr.map((str) => str.toLowerCase());
 
 /** get the index of unit */
 const indOfUnit = (arr: string[], unit: string) =>
   arr.indexOf(unit.toLowerCase());
 
 /** maps the array and the index of unit */
-const find = (arr: string[], unit: string) =>
-  indOfUnit(mapArr(arr), unit);
+const find = (arr: string[], unit: string) => indOfUnit(mapArr(arr), unit);
 
 /** makes a function that gets the base to the power of value */
 const maker = (base: number) => (val: number) => Math.pow(base, val);
@@ -19,7 +17,6 @@ const th = maker(1000);
 const th24 = maker(1024);
 
 export default function value(unit: string) {
-
   const UnitsMatch = find(units, unit);
   // USM stands for UnitsShortcutsMatch
   const USM = find(unitsShortcut, unit);
