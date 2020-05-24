@@ -1,6 +1,6 @@
 {
   "name": "convert-size",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "a package to convert size from bytes to kb mb and so on",
   "main": "dist/convertSize.min.js",
   "types": "dist/convertSize.d.ts",
