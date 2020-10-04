@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "out",
-    "removeComments": true
+    "removeComments": true,
+    "declaration": true
   }
 }
