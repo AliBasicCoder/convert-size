@@ -1,13 +1,6 @@
 # convert-size
 
-This is library is available in deno
-
-just use
-
-```js
-import convertSize from "https://cdn.jsdelivr.net/npm/convert-size@latest/src/index.ts";
-```
-
+[![nest badge](https://nest.land/badge-large.svg)](https://nest.land/package/convert_size)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7e46b80fed65435c9f83b9808e51a640)](https://app.codacy.com/manual/AliBasicCoder/convert-size?utm_source=github.com&utm_medium=referral&utm_content=AliBasicCoder/convert-size&utm_campaign=Badge_Grade_Dashboard)
 [![npm](https://img.shields.io/npm/dm/convert-size)](https://npmjs.com/package/convert-size)
 [![npm](https://img.shields.io/npm/v/convert-size)](https://npmjs.com/package/convert-size)
@@ -28,8 +21,8 @@ units such as KB MB TB
 const { default: convertSize } = require("convert-size");
 // or (es6)
 import convertSize from "convert-size";
-// on deno
-import convertSize from "https://cdn.jsdelivr.net/npm/convert-size@latest/src/index.ts";
+// on deno (replace version with current version)
+import convertSize from "https://x.nest.land/convert_size@version/mod.ts";
 
 convertSize(1000); // => 1 KB
 convertSize(1000 * 1000); // => 1 MB
