@@ -24,7 +24,7 @@ import convertSize from "convert-size";
 // on deno (replace version with current version)
 import convertSize from "https://x.nest.land/convert-size@version/mod.ts";
 // or
-import convertSize from "https://deno.land/x/convert-size@version/mod.ts";
+import convertSize from "https://deno.land/x/convert_size@version/mod.ts";
 
 convertSize(1000); // => 1 KB
 convertSize(1000 * 1000); // => 1 MB
