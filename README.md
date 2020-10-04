@@ -1,6 +1,6 @@
 # convert-size
 
-[![nest badge](https://nest.land/badge-large.svg)](https://nest.land/package/convert_size)
+[![nest badge](https://nest.land/badge-large.svg)](https://nest.land/package/convert-size)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0839cb70bf1d4276a450c94019892fb2)](https://app.codacy.com/gh/AliBasicCoder/convert-size?utm_source=github.com&utm_medium=referral&utm_content=AliBasicCoder/convert-size&utm_campaign=Badge_Grade)
 [![npm](https://img.shields.io/npm/dm/convert-size)](https://npmjs.com/package/convert-size)
 [![npm](https://img.shields.io/npm/v/convert-size)](https://npmjs.com/package/convert-size)
@@ -22,7 +22,9 @@ const { default: convertSize } = require("convert-size");
 // or (es6)
 import convertSize from "convert-size";
 // on deno (replace version with current version)
-import convertSize from "https://x.nest.land/convert_size@version/mod.ts";
+import convertSize from "https://x.nest.land/convert-size@version/mod.ts";
+// or
+import convertSize from "https://deno.land/x/convert-size@version/mod.ts";
 
 convertSize(1000); // => 1 KB
 convertSize(1000 * 1000); // => 1 MB
