@@ -3,10 +3,10 @@
   "description": "a lib to convert bettwen files size",
   "entry": "./mod.ts",
   "stable": true,
-  "files": ["./src/**/*", "./README.md", "./mod.ts"],
+  "files": ["./convertSize.ts", "./README.md", "./mod.ts"],
   "repository": "https://github.com/AliBasicCoder/convert-size",
   "version": "1.1.2",
-  "checkTests": "deno test test/test.ts",
+  "checkTests": "deno test test.ts",
   "checkAll": true,
   "unlisted": false
 }

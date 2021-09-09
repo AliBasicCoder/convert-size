@@ -23,8 +23,8 @@ jobs:
       - uses: denolib/setup-deno@v2
         with:
           deno-version: v1.x
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - run: npm install --no-package-lock
+      - run: npm run build
   test:
     runs-on: ubuntu-latest
 
@@ -33,4 +33,4 @@ jobs:
       - uses: denolib/setup-deno@v2
         with:
           deno-version: v1.x
-      - run: deno test test/test.ts
+      - run: deno test test.ts

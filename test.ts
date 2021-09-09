@@ -1,4 +1,4 @@
-import convertSize from "../mod.ts";
+import convertSize from "./mod.ts";
 import { assertEquals } from "https://deno.land/std@0.73.0/testing/asserts.ts";
 
 Deno.test({

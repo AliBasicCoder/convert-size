@@ -1,3 +1,3 @@
-import convertSize from "./src/index.ts";
+import convertSize from "./convertSize.ts";
 
 export default convertSize;

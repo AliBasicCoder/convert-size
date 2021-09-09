@@ -1,7 +1,4 @@
 node_modules/
-index.js
-dist/
-out/
 convertSize.d.ts
-convertSize.min.js
+convertSize.js
 *.log
