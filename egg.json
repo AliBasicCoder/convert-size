@@ -1,12 +1,19 @@
 {
   "name": "convert-size",
-  "description": "a lib to convert bettwen files size",
+  "description": "a lib to convert between files size",
   "entry": "./mod.ts",
   "stable": true,
-  "files": ["./convertSize.ts", "./README.md", "./mod.ts"],
+  "files": [
+    "./convertSize.ts",
+    "./README.md",
+    "./mod.ts"
+  ],
   "repository": "https://github.com/AliBasicCoder/convert-size",
-  "version": "1.1.2",
+  "version": "1.1.7",
   "checkTests": "deno test test.ts",
-  "checkAll": true,
-  "unlisted": false
+  "checkFormat": false,
+  "unlisted": false,
+  "check": true,
+  "homepage": "https://github.com/AliBasicCoder/convert-size",
+  "ignore": []
 }
