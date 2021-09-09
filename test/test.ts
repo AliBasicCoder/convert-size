@@ -2,43 +2,25 @@ import convertSize from "../mod.ts";
 import { assertEquals } from "https://deno.land/std@0.73.0/testing/asserts.ts";
 
 Deno.test({
-  name: "1000 base: number",
+  name: "number",
   fn() {
     assertEquals(convertSize(1000), "1 KB");
-  },
-});
-
-Deno.test({
-  name: "1000 base: number and string",
-  fn() {
-    assertEquals(convertSize(1000 * 1000, "KB"), 1000);
-  },
-});
-
-Deno.test({
-  name: "1000 base: string and string",
-  fn() {
-    assertEquals(convertSize("1 GB", "MB"), 1000);
-  },
-});
-
-Deno.test({
-  name: "1024 base: number",
-  fn() {
     assertEquals(convertSize(1024, { base: 1024 }), "1 KiB");
   },
 });
 
 Deno.test({
-  name: "1024 base: number and string",
+  name: "number and string",
   fn() {
+    assertEquals(convertSize(1000 * 1000, "KB"), 1000);
     assertEquals(convertSize(1024 * 1024, "KiB"), 1024);
   },
 });
 
 Deno.test({
-  name: "1024 base: string and string",
+  name: "string and string",
   fn() {
+    assertEquals(convertSize("1 GB", "MB"), 1000);
     assertEquals(convertSize("1 GiB", "MiB"), 1024);
   },
 });
@@ -51,15 +33,9 @@ Deno.test({
 });
 
 Deno.test({
-  name: "options: accuracy number",
+  name: "options: accuracy",
   fn() {
     assertEquals(convertSize(1000, "KiB", { accuracy: 2 }), 0.98);
-  },
-});
-
-Deno.test({
-  name: "options: accuracy string",
-  fn() {
     assertEquals(
       convertSize(1000, "KiB", { stringify: true, accuracy: 2 }),
       "0.98 KiB"
