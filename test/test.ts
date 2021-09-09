@@ -29,6 +29,7 @@ Deno.test({
   name: "options: stringify",
   fn() {
     assertEquals(convertSize(1000, "KB", { stringify: true }), "1 KB");
+    assertEquals(convertSize("10 MB", "KB", { stringify: true }), "10000 KB");
   },
 });
 
