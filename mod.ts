@@ -1,3 +1,3 @@
-import convertSize from "./convertSize.ts";
+import convert from "http://deno.land/x/convert_pro/mod.ts";
 
-export default convertSize;
+export default convert.bytes;

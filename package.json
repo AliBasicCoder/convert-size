@@ -1,18 +1,13 @@
 {
   "name": "convert-size",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "a package to convert size from bytes to kb mb and so on",
   "main": "convertSize.js",
   "types": "convertSize.d.ts",
-  "scripts": {
-    "build": "tsc convertSize.ts -d --lib es2020",
-    "test": "deno test.ts",
-    "lint": "eslint convertSize.ts mod.ts",
-    "prepublishOnly": "tsc convertSize.ts -d --lib es2020"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AliBasicCoder/convert-size.git"
+    "url": "git+https://github.com/AliBasicCoder/convert-pro.git"
   },
   "keywords": [
     "size",
@@ -23,13 +18,10 @@
   "author": "AliBasicCoder",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AliBasicCoder/convert-size/issues"
+    "url": "https://github.com/AliBasicCoder/convert-pro/issues"
   },
-  "homepage": "https://github.com/AliBasicCoder/convert-size#readme",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
-    "eslint": "^6.8.0",
-    "typescript": "^3.8.2"
+  "homepage": "https://github.com/AliBasicCoder/convert-pro#readme",
+  "dependencies": {
+    "convert-pro": "*"
   }
 }

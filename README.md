@@ -14,6 +14,16 @@
 convert-size is a package to convert a size with bytes to
 units such as KB MB TB
 
+## BIG NOTE
+
+this package is now a mirror of to a bigger package called [convert-pro](https://github.com/AliBasicCoder/convert-pro) only convert.bytes
+this means that this package will have exactly the same api as convert.bytes in [convert-pro](https://github.com/AliBasicCoder/convert-pro)
+but DON'T WORRY IT WILL BE BACKWARDS COMPATIBLE 
+
+IT SHOULD WORK JUST FINE
+
+if you have any issue or PR do it in [convert-pro](https://github.com/AliBasicCoder/convert-pro)'s github repo NOT in "convert-size"'s
+
 ## Usage
 
 ```js
