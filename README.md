@@ -18,7 +18,8 @@ units such as KB MB TB
 
 this package is now a mirror of to a bigger package called [convert-pro](https://github.com/AliBasicCoder/convert-pro) only convert.bytes
 this means that this package will have exactly the same api as convert.bytes in [convert-pro](https://github.com/AliBasicCoder/convert-pro)
-but DON'T WORRY IT WILL BE BACKWARDS COMPATIBLE 
+
+but DON'T WORRY IT WILL BE BACKWARDS COMPATIBLE
 
 IT SHOULD WORK JUST FINE
 
@@ -42,6 +43,10 @@ convertSize("1 MB"); // => 1000000
 convertSize("1 GB", "MB"); // => 1000
 convertSize(1000000, "KB"); // => 1000
 convertSize("1 mb", "GB", { stringify: true }); // => 0.001 GB
+// convert multiple units
+convertSize("10 kb 1 mb"); // => 1001000
+convertSize("10 kib 1 mb"); // => 1001024
+convertSize("10 kib 1 mb", "kb"); // => 1001.024
 
 // to know more about option read the options part below
 convertSize(1000 * 1000, {
